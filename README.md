@@ -42,6 +42,21 @@ List available presets:
 python -m arena.cli --list-presets
 ```
 
+## Baseline Results
+
+```
+$ make bench
+python -m arena.cli --preset baseline-6
+Rank  Bot       Rating  G   W   L   D
+----  --------  ------  --  --  --  --
+   1  minimax   1406.4  30  27   1   2
+   2  mcts      1292.9  30  21   9   0
+   3  greedy    1232.4  30  17  12   1
+   4  dex       1217.4  30  16  11   3
+   5  random    1048.9  30   4  26   0
+   6  clod      1001.9  30   2  28   0
+```
+
 ## Built-in Bots
 
 - `random`: random legal move
