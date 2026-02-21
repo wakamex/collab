@@ -18,6 +18,12 @@ Run a tournament with built-in bots:
 python -m arena.cli --bots dex clod random greedy minimax mcts --rounds 2 --games-per-pair 2 --seed 42
 ```
 
+Run the reproducible benchmark preset:
+
+```bash
+python -m arena.cli --preset baseline-6
+```
+
 Write a markdown report:
 
 ```bash
@@ -28,6 +34,12 @@ List available bots:
 
 ```bash
 python -m arena.cli --list-bots
+```
+
+List available presets:
+
+```bash
+python -m arena.cli --list-presets
 ```
 
 ## Built-in Bots
@@ -46,6 +58,17 @@ Add new strategies without changing engine internals:
 1. Create a bot class that implements `choose_move(game, player, rng)`.
 2. Register it in `arena/router.py` (or in your own script via `BotRouter`).
 3. Run tournaments and compare ELO deltas in markdown reports.
+
+## Benchmark Snapshot Workflow
+
+Use the fixed benchmark preset and write markdown snapshots under `snapshots/`:
+
+```bash
+python -m arena.cli --preset baseline-6 --markdown-out snapshots/baseline-6-seed42.md
+```
+
+`reports/` is ignored (ephemeral), while `snapshots/` is intended for committed
+baseline history.
 
 ## Test
 
