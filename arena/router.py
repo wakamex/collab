@@ -5,6 +5,7 @@ from typing import Callable, Dict, List
 from .bot import Bot, GreedyBot, RandomBot
 from .mcts_bot import MCTSBot
 from .minimax_bot import MinimaxBot
+from .hybrid_bot import HybridBot
 
 
 BotFactory = Callable[[], Bot]
@@ -39,6 +40,7 @@ def build_default_router() -> BotRouter:
     router.register("greedy", lambda: GreedyBot(name="greedy"))
     router.register("minimax", lambda: MinimaxBot(name="minimax"))
     router.register("mcts", lambda: MCTSBot(name="mcts"))
+    router.register("hybrid", lambda: HybridBot(name="hybrid"))
 
     # Collaborative aliases so each partner has a baseline identity bot.
     router.register("dex", lambda: GreedyBot(name="dex"))
