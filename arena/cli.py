@@ -10,7 +10,7 @@ from .tournament import MatchRecord, TournamentReport, TournamentRunner
 
 
 DEFAULT_CONFIG = {
-    "bots": ["dex", "clod", "random", "greedy", "minimax", "mcts"],
+    "bots": ["dex", "clod", "random", "greedy", "minimax", "mcts", "negamax"],
     "rounds": 1,
     "games_per_pair": 2,
     "seed": 42,
@@ -26,6 +26,14 @@ PRESETS = {
         "seed": 42,
         "k_factor": 24.0,
         "recent_games": 20,
+    },
+    "full-7": {
+        "bots": ["dex", "clod", "random", "greedy", "minimax", "mcts", "negamax"],
+        "rounds": 3,
+        "games_per_pair": 2,
+        "seed": 42,
+        "k_factor": 24.0,
+        "recent_games": 30,
     },
 }
 
