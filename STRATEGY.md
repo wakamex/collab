@@ -54,17 +54,18 @@ The evaluation directly probes the board for threats by temporarily placing piec
 
 ## Results
 
-### Full Tournament (7 bots, 3 rounds, seed 42)
+### Full Tournament (8 bots, 3 rounds, seed 42)
 
 ```
 Rank  Bot       Rating  Games  W   L   D
-   1  clod      1425.0  36     33  2   1
-   2  negamax   1392.3  36     31  3   2
-   3  minimax   1282.8  36     24  12  0
-   4  mcts      1147.3  36     13  22  1
-   5  dex       1125.6  36     12  23  1
-   6  greedy    1083.2  36     10  25  1
-   7  random     943.8  36      0  36  0
+   1  negamax   1430.8  42     38  2   2
+   2  clod      1412.3  42     36  4   2
+   3  minimax   1343.5  42     31  11  0
+   4  mcts      1185.4  42     20  22  0
+   5  greedy    1155.5  42     16  24  2
+   6  dex       1077.3  42     12  29  1
+   7  hybrid    1076.1  42     11  30  1
+   8  random     919.0  42      0  42  0
 ```
 
 ### Head-to-Head vs Previous Champion
