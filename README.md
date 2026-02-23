@@ -63,8 +63,24 @@ Rank  Bot       Rating  G   W   L   D
 - `greedy`: immediate win/block + center preference
 - `minimax`: alpha-beta minimax with heuristic evaluation
 - `mcts`: Monte Carlo Tree Search with UCB1
+- `hybrid`: **Advanced AI** - threat analysis + smart MCTS + positional evaluation
 - `dex`: greedy profile (collaborator identity bot)
 - `clod`: random profile (collaborator identity bot)
+
+### Advanced AI Strategy
+
+The `hybrid` bot implements a multi-phase strategy:
+1. **Threat Detection**: Find immediate wins and forced blocks
+2. **Threat Analysis**: Odd/even threat parity and winning positions
+3. **Smart MCTS**: 2000 heuristic-guided simulations
+4. **Positional Evaluation**: Center control and pattern recognition
+
+See [AI_STRATEGY.md](AI_STRATEGY.md) for detailed technical documentation.
+
+Try the hybrid bot:
+```bash
+python -m arena.cli --bots hybrid minimax mcts --rounds 2 --games-per-pair 2 --seed 42
+```
 
 ## Collaborative Workflow
 
